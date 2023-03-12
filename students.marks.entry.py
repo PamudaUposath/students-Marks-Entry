@@ -152,6 +152,7 @@ def SaveToDisk():
         dir.mkdir(parents=True, exist_ok=True)
         file = open(f"{dir}/{p}.txt", 'w')
         file.write(f"Subjects - Marks:{subjectsBoard.get(1.0, tk.END)}\nMaximum: {_Maximum_}\nMinimum: {_Minimum_}\nTotal: {_Total_}\nAvarage: {_Avarage_}\n")
+        file.close()
         saveToDiskConfirmation.configure(text="Saved!")
     except Exception:
         saveToDiskConfirmation.configure(fg='red', text="Saving failed!")
